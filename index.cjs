@@ -36,6 +36,21 @@ async function sendTransactionWithFalconSig(falconSig, contract, contractAddress
     msgValue,
   ];
 
+
+const s = '0x' + Array.from(falconSig.signature)
+  .map(b => b.toString(16).padStart(2, '0'))
+  .join('');
+
+  const p = '0x' + Array.from(falconSig.publicKey)
+  .map(b => b.toString(16).padStart(2, '0'))
+  .join('');
+
+console.log("-----");
+console.log("signature",s );
+console.log("-----");
+console.log("pk", p);
+
+
   const encodedData = contract.interface.encodeFunctionData("store", functionArgs);
 
   const tx = {
@@ -45,8 +60,10 @@ async function sendTransactionWithFalconSig(falconSig, contract, contractAddress
     data: encodedData,
   };
 
+
   const txResponse = await wallet.sendTransaction(tx);
   console.log("Transaction sent:", txResponse.hash);
+  
 
   const receipt = await txResponse.wait();
   console.log("Transaction mined:", receipt);
