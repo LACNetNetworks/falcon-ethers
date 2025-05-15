@@ -1,0 +1,11 @@
+{
+  "name": "falcon-ethers-project",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "dependencies": {
+    "@lacchain/gas-model-provider": "^1.2.1",
+    "ethers": "^6.0.0",
+    "falcon-crypto": "^1.0.0"
+  }
+}
