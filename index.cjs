@@ -79,7 +79,7 @@ async function main() {
 
     const yourRPCNode = "http://34.136.8.0";
     const nodeAddress = "0xb2e5ecebeb8e8617637d6364d9c6f6ee7508ac42";
-    const privateKey = "a0a2af404337c096113bc2c180df7a6636a88f8eb5da6160817f9315aaafee80";
+    const privateKey = "";
     const contractAddress = "0xFEf7c78793dF5aC704C023C6bC19d672cF8dED75";
 
     const provider = new LacchainProvider(yourRPCNode);
